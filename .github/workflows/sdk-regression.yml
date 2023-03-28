@@ -1,21 +1,18 @@
 name: SDK Regression
 on:
-  pull_request:
-    types: [opened]
-  issue_comment:
-    types: [created, edited] 
+  push
 jobs:
   regression:
     name: Trigger SDK regression test
     runs-on: ubuntu-latest
-    if: ${{ github.event.issue.pull_request && github.event.comment.body == 'RUN_REGRESSION' }}
+    # if: ${{ github.event.issue.pull_request && github.event.comment.body == 'RUN_REGRESSION' }}
     strategy:
       matrix:
         repo: 
           - percy-ember
           - percy-cypress
           - percy-puppeteer
-          - percy-storybook
+          # - percy-storybook
           - percy-playwright
           - percy-testcafe
           - percy-nightwatch
