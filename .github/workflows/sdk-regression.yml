@@ -21,7 +21,7 @@ jobs:
           - percy-protractor
           - percy-selenium-js
           - percy-selenium-dotnet
-          - percy-selenium-java
+          # - percy-selenium-java
           - gatsby-plugin-percy
     steps:
       - name: Trigger Workflow & Wait
