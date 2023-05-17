@@ -1,7 +1,7 @@
 parser: '@babel/eslint-parser'
 extends: standard
 plugins:
-  - babel
+  - babelf
 rules:
   one-var: off
   prefer-const: off
